@@ -1,0 +1,55 @@
+/* NAVIGATION */
+figure  {
+  background:url($logoImg) no-repeat 0 50px;
+  display:block;
+  margin:0;
+  @include navbar(400px, 190px, left);
+  @include insertMediaQuery(959px) {
+    @include navbar(inherit, 140px, none);
+    background-position:center;
+  }
+  @include insertMediaQuery(459px) {
+    background-size:contain;
+    height:100px;
+  }
+}
+
+nav {
+  @include navbar(540px, 190px, left);
+  @include insertMediaQuery(959px) {
+    @include navbar(inherit, 50px, none);
+    text-align:center;
+  }
+  @include insertMediaQuery(459px) {
+    margin-bottom:40px !important;
+  }
+  text-align:right;
+  ul {
+    list-style-type:circle;
+    margin-top:95px;
+    li {
+      display:inline;
+      font-size:0.8em;
+      margin-right:10px;
+      a {
+        color: $red;
+        text-decoration:none;
+        letter-spacing:-0.01em;
+        &:hover {
+          color: $white;
+        }
+      }
+      @include insertMediaQuery(959px) {
+        font-size:1em;
+        margin:0 10px;
+      }
+      @include insertMediaQuery(767px) {
+        font-size:0.8em;
+        margin:0 5px;
+      }  
+    }
+    @include insertMediaQuery(959px) {
+      margin-top:0;
+    }
+  }
+}

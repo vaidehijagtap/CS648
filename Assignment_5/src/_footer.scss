@@ -1,0 +1,40 @@
+footer  {
+  @include wt_and_ht(100%, 120px);
+  background:#30353D;
+  text-align:center;
+  color:$white;
+  padding-top:50px;
+  @include insertMediaQuery(459px) {
+    text-align:center;
+  }
+  > p, > img {
+    float:none;
+    margin:0;
+  }
+}
+
+.social-media {
+  margin:0 auto;
+  width:165px;
+  a {
+    display:block;
+    text-indent:-9999px;
+    @include wt_and_ht(36px, 36px);
+  }
+  div {
+    float:left;
+    margin-right:5px;
+  }
+  div.one {
+      @include socialMediaImg(0);
+  }
+  div.two {
+      @include socialMediaImg(1);
+  }
+  div.three {
+      @include socialMediaImg(2);
+  }
+  div.four {
+      @include socialMediaImg(3);
+  }
+}

@@ -1,0 +1,59 @@
+header  {
+  width:inherit;
+  clear:both;
+  text-align:center;
+  padding-top:40px;
+}
+
+header img  {
+  max-width:100%;
+  height:auto;
+  @include insertMediaQuery(767px) {
+    margin-bottom:100px;
+  }
+  @include insertMediaQuery(459px) {
+    margin-bottom:80px;
+  }
+}
+
+header h1 {
+  @include headers($red, 100, 4em);
+  @include insertMediaQuery(959px) {
+    font-size:3em;
+  }
+  @include insertMediaQuery(767px) {
+    font-size:2em;
+  }
+  @include insertMediaQuery(459px) {
+    & :first-child {
+      font-size:1.4em;
+      margin-bottom:20px;
+    }
+  }
+}
+
+header h2 {
+  @include headers($white, 900, 2.5em); 
+  margin-bottom: 70px;
+  @include insertMediaQuery(959px) {
+    font-size:1.5em;
+  }
+  @include insertMediaQuery(767px) {
+    font-size:1em;
+  }
+  @include insertMediaQuery(459px) {
+    font-size:1.4em;
+  }
+}
+
+header h3 {
+  @include headers($gray, 400, 2em);
+  margin-bottom: 50px;
+  @include insertMediaQuery(767px) {
+    font-size:1.5em;
+  }
+  @include insertMediaQuery(459px) {
+    color:$white;
+    font-size:1em;
+  }
+}

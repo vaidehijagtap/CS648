@@ -1,0 +1,79 @@
+#headline { 
+  @include wt_and_ht(100%, 130px);
+  background:$headlineBg;
+  text-align:center;
+  margin:0 auto;
+  h1 {
+    color:$white;
+    font-size:2.5em;
+    font-weight:100;
+    padding-top:50px;
+    @include insertMediaQuery(767px) {
+      font-size:2em;
+      padding-top:50px;
+    }
+    @include insertMediaQuery(459px) {
+      font-size:1.5em;
+      padding-top:30px;
+    }
+  }
+}
+
+#content  {
+  width:940px;
+  margin:20px auto;
+  h3  {
+    color:$gray;
+    font-size:2em;
+    font-weight:400;
+    @include insertMediaQuery(459px) {
+      font-size:1.6em;
+    }
+  }
+  #products {
+    img {
+      float:left;
+      margin-right:20px;
+    }
+    article {
+      margin-bottom:40px;
+    }
+    h4 {
+      line-height:1em;
+    }
+    @include contentStyles(460px, left);
+  }
+  #testimonials {
+    @include contentStyles(460px, right);
+  }
+  @include insertMediaQuery(959px) {
+    width:inherit;
+  }
+  > #testimonials, > #products {
+    @include insertMediaQuery(959px) {
+      width:46%;
+      margin:0 2%;
+    }
+
+    @include insertMediaQuery(767px) {
+      width:96%;
+      margin:0 2%;
+      float:none;
+    }
+  }
+}
+
+.greybar  {
+  @include wt_and_ht(100%, 90px);
+  background:$graybarBg;
+  clear:both;
+  padding-top:30px;
+}
+
+body {
+  > #content article img, >  .greybar{
+    @include insertMediaQuery(659px) {
+      display:none;
+    }
+  }
+}
