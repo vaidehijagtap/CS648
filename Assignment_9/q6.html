@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>index</title>
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script>
+			$(document).ready(function() {
+
+            $("#myDiv1").width("400px").height("400px");
+
+
+            $("body").on({
+                click: function(event) {
+                    $("span").html(event.target.nodeName + " was clicked");
+                },
+
+                mouseenter: function(event) {
+                    $("span").html("The mouse entered " + event.target.nodeName);
+
+                },
+
+                mouseleave: function(event) {
+                    $("span").html("The mouse left " + event.target.nodeName);
+                }
+                
+            }, "div");
+
+        });
+		</script>
+	</head>
+
+	<body>
+		
+		 <div id= "myDiv1" style="background-color: rgb(255, 0, 247)"></div>
+    <span></span>
+	</body>
+</html>

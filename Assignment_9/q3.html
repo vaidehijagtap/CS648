@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>index</title>
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script>
+			$(document).ready(function() {
+            $("body").on({
+                click: function(event) {
+                    window.alert(event.target.nodeName + " has been clicked.")
+                }
+            }, "button");
+        });
+		</script>
+	</head>
+
+	<body>
+		
+		<button id="button3">Click Button!</button>
+	</body>
+</html>

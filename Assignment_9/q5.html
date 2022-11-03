@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>index</title>
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script>
+	$(document).ready(function() {
+
+            $("#myDiv1").width("400px").height("400px");
+
+
+            $("body").on("click mouseenter mouseleave","div", function() {
+                alert("The div was either clicked on, the mouse entered it, or the mouse left it!");
+            });
+
+                
+        });
+		</script>
+	</head>
+
+	<body>
+		
+		<div id= "myDiv1" style="background-color: rgb(255, 0, 230)"></div>
+	</body>
+</html>
