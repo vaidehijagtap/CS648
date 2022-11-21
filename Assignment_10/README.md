@@ -1,3 +1,3 @@
-# CS648-Assignment10
-_Forms and jQuery_
+# CS648 - Assignment_10
+# Implemented forms and jQuery
  
